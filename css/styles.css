@@ -186,24 +186,28 @@ padding-left: 20px;
 padding-right: 20px;
 padding-top: 8px;
 padding-bottom: 8px;
-border-radius: 8px;
 text-align: center;
 text-decoration: none;
 font-size: 0.8rem;
 color: #ffffff;
-font-weight:600;
+font-weight:400;
 margin-left: auto;
 margin-right: auto;
+border-style: solid;
+border-color: #000000;
+border-radius: 12px;
 margin-top: 30px;
 margin-bottom: 20px;
 display: block;
 cursor: pointer;
+
 }
 
 
 button:hover
 { 
-background-color: #545454;
+background-color: #ffffff;
+color: #000;
 
 }
 
@@ -894,5 +898,61 @@ header ul li a{
     
     max-width: 980px; 
     margin:auto;
+  }
+}
+
+
+/* Animaciones */
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.text-shadow-drop-tl {
+	-webkit-animation: text-shadow-drop-tl 0.6s ease-out infinite alternate-reverse both;
+	        animation: text-shadow-drop-tl 0.6s ease-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes text-shadow-drop-tl {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: -6px -6px 18px rgba(236, 95, 1, 0.50);
+  }
+}
+@keyframes text-shadow-drop-tl {
+  0% {
+    text-shadow: 0 0 0 rgba(236, 95, 1, 0);
+  }
+  100% {
+    text-shadow: -6px -6px 18px rgba(236, 95, 1, 0.50);
   }
 }
