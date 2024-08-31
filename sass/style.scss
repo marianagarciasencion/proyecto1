@@ -61,15 +61,16 @@ button {
 h1 {
   @extend %base-title;
   color: $primary-color;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 35px;
 }
 
 h2 {
   @extend %base-title;
   color: $primary-color;
-  font-size: 1.0rem;
+  font-size: 1.4rem;
   text-align: center;
+  padding: 20px;
 }
 
 h3 {
@@ -193,8 +194,9 @@ animation: fade-in 1.2s ease-in both;
   @extend %base-title;
   color: $secondary-color;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 35px;
+  padding: 20px;
 }
 
 
@@ -306,7 +308,6 @@ hr {
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
   }
 
   .article-content {
@@ -422,14 +423,7 @@ hr {
   background-color: #575A89;
 }
 
-.card-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 90%;
-  gap: 20px;
-  margin: auto;
+
 
   article.card {
     background-color: #fff;
@@ -474,7 +468,7 @@ hr {
       }
     }
   }
-}
+
 
 .blog-button-blanco {
   @include button-style($secondary-color, #575A89);
@@ -493,6 +487,8 @@ hr {
     height: auto;
   }
 
+  
+
   .navbar li a {
     color: $primary-color;
   }
@@ -504,6 +500,7 @@ hr {
     justify-content: center;
     align-items: center;
   }
+
 }
 
 @media (max-width: 456px) {
@@ -518,7 +515,7 @@ hr {
     padding: 5px;
     width: 100px;
     margin-bottom: 10px;
-    margin-left: 25px;
+    
   }
 
   header nav {
@@ -549,6 +546,7 @@ hr {
   .section-cabezal {
     display: none;
   }
+
 
   .section-servicios-home {
     display: flex;
@@ -609,6 +607,7 @@ hr {
 
 @media (min-width: 457px) {
   header {
+    margin-top: 0px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -778,7 +777,7 @@ hr {
 @media screen and (max-width: 1024px) {
   
   h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: center;
 }
 
@@ -815,12 +814,9 @@ hr {
 
 /* Estilos para max-width: 768px */
 @media screen and (max-width: 768px) {
-  body {
-      padding: 20px;
-  }
-
+ 
   h1 {
-      font-size: 2rem;
+      font-size: 1.7rem;
       text-align: center;
   }
 
@@ -874,7 +870,7 @@ hr {
 /* Estilos para max-width: 458px */
 @media screen and (max-width: 458px) {
   body {
-      padding: 10px;
+      
       margin: 0px;
   }
 
@@ -914,4 +910,108 @@ hr {
 header{
   margin: 0px;
 }
+
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 90%;
+  gap: 20px;
+  margin: auto;
+  justify-content: center;
+
+  article.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+
+    // Estilo por defecto para pantallas grandes (4 columnas)
+    width: calc(25% - 20px);
+  }
+}
+
+// Estilos para pantallas entre 768px y 1024px
+@media (max-width: 1024px) and (min-width: 768px) {
+  .card-container {
+    article.card {
+      width: calc(50% - 20px); // 2 columnas
+    }
+  }
+}
+
+// Estilos para pantallas menores a 768px
+@media (max-width: 768px) {
+  .card-container {
+    article.card {
+      width: calc(100% - 20px); // 1 columna
+    }
+  }
+}
+
+// Contacto
+
+.form-container {
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+}
+
+form {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  justify-content: center; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 16px; 
+}
+
+.submit-btn {
+  background-color: #ff204e;
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+  transition: background-color 0.3s; 
+}
+
+.submit-btn:hover {
+  background-color: #e01c44; 
+}
+
+// Media Queries para Responsividad
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px; // Ajusta el relleno en pantallas más pequeñas
+  }
+
+  .category-buttons {
+    flex-direction: column; // Cambia los botones a una columna en lugar de una fila
+    align-items: center; // Centra los botones
+  }
+}
+
+
 
