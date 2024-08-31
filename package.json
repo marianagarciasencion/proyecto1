@@ -204,7 +204,3 @@
   "keywords": [],
   "description": ""
 }
-
-"optionalDependencies": {
-  "fsevents": false
-}
