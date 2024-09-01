@@ -61,7 +61,6 @@
     "find-up": "^4.1.0",
     "fs-minipass": "^2.1.0",
     "fs.realpath": "^1.0.0",
-    "fsevents": "^2.3.3",
     "function-bind": "^1.1.2",
     "gauge": "^4.0.4",
     "gaze": "^1.1.3",
