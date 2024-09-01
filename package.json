@@ -5,9 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss ./sass/style.scss ./css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "preinstall": "if [ $(uname) != 'Darwin' ]; then npm ls fsevents && npm uninstall fsevents; fi",
+      "start": "your-start-script-here",
+      "build": "your-build-script-here"
     
   },
+
+
+  
   
   "dependencies": {
     "abbrev": "^1.1.1",
